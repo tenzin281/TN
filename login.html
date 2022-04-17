@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+  <link rel="stylesheet" href="css/s.css">
+  <title>Login</title>
+</head>
+<body>
+  
+  <div class="login-form">
+    <h2>LOGIN </h2>
+    <form name="login_form" onsubmit="return validation()">
+      <div class="input-field">
+      <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Username" name="username">
+      </div>
+
+      <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <input type="text" placeholder="Password" name="userpass">
+      </div>
+
+    <button>Sign In</button>
+    <div class="extra">
+      <a href="#">Forgot password ?</a>
+      <a href="#">Create an Account</a>
+    </div>
+</form>
+</div>
+ 
+<script>
+  function validation()
+  {
+    let username=document.forms['login_form']['username'];
+    let userpass=document.forms['login_form']['userpass'];
+    let login_error=document.getElementById('login_error');
+
+    if (username.value=='') {
+      login_error.innerHTML="username Field is Empty";
+      login_error.style.display="block";
+    }
+    return true;
+  }
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
